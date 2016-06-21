@@ -20,14 +20,14 @@ utils.BindData = function BindData(controller, bindings) {
     controller.data = data;
     m.redraw();
   });
-}
+};
 
 utils.syncLocalStorage = (function syncLocalStorage () {
   const key = 'mithril-app';
 
   function initStateFromLocalStorage() {
-    const state = JSON.parse(localStorage.getItem(key) || "{}");
-    db.set('state', state)
+    const state = JSON.parse(localStorage.getItem(key) || '{}');
+    db.set('state', state);
   }
 
   function syncToLocalStorage() {
@@ -45,7 +45,7 @@ utils.syncLocalStorage = (function syncLocalStorage () {
   return function setupAll() {
     initStateFromLocalStorage();
     syncToLocalStorage();
-  }
+  };
 })();
 
 module.exports = utils;

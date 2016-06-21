@@ -4,7 +4,7 @@ import db from 'app/db';
 
 import {syncLocalStorage} from 'app/utils';
 
-import Home from 'app/views/Home'
+import Home from 'app/views/Home';
 
 function mountApplication() {
   m.mount(document.getElementById('app'), Home);

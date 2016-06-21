@@ -8,21 +8,21 @@ const Greeter = {
 
     BindData(ctrl, {
       name: ['state', 'user']
-    })
+    });
 
     ctrl.init = function(el, inited) {
       if(inited) {
         return;
       }
       el.value = ctrl.data.name || '';
-    }
+    };
 
     ctrl.nameUpdated = function(e) {
       B.do({
         action: 'change-name',
         name: e.target.value,
-      })
-    }
+      });
+    };
   },
   view (ctrl) {
     return m('div', [
@@ -35,8 +35,8 @@ const Greeter = {
         onkeyup: ctrl.nameUpdated,
         config: ctrl.init,
       })
-    ])
+    ]);
   }
-}
+};
 
 export default Greeter;

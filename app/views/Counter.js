@@ -14,17 +14,17 @@ const Counter = {
       B.do({
         action: 'counter-inc'
       });
-    }
+    };
     ctrl.add2 = function() {
       B.do({
         action: 'counter-add2'
       });
-    }
+    };
     ctrl.reset = function() {
       B.do({
         action: 'counter-reset'
       });
-    }
+    };
   },
   view (ctrl) {
     return m('div', [
@@ -44,6 +44,6 @@ const Counter = {
       }, 'reset'),
     ]);
   }
-}
+};
 
 export default Counter;

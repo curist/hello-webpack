@@ -15,6 +15,6 @@ const Home = {
       m(Counter),
     ]);
   }
-}
+};
 
 export default Home;

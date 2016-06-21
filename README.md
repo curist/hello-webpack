@@ -49,6 +49,8 @@ Hot module replacement enabled out of the box.
 
 ## modules/plugins
 
+* babel
+* eslint
 * precss
 * autoprefixer
 * postcss

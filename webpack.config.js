@@ -20,6 +20,13 @@ module.exports = {
     }
   },
   module: {
+    preLoaders: [
+      {
+        test: /\.js$/,
+        exclude: /(node_modules|bower_components)/,
+        loader: 'eslint',
+      }
+    ],
     loaders: [
       {
         test: /\.css$/,
@@ -35,6 +42,9 @@ module.exports = {
         }
       }
     ]
+  },
+  eslint: {
+    configFile: './.eslintrc.js'
   },
   postcss: function() {
     return [precss, autoprefixer];
